@@ -103,7 +103,7 @@ public class Empresa {
 
 		for (Vehiculo c : coleccionVehiculos) {
 
-			if (c instanceof Coche && ((Coche) c).getPlazasMax() > plazas && c.getTipoMotor().equalsIgnoreCase(tipoMotor)) {
+			if (c instanceof Coche && ((Coche) c).getPlazasMax() >= plazas && c.getTipoMotor().equalsIgnoreCase(tipoMotor)) {
 				misCoches.add((Coche) c);
 
 			}
@@ -118,7 +118,7 @@ public class Empresa {
 
 		for (Vehiculo c : coleccionVehiculos) {
 
-			if (c instanceof Furgon && ((Furgon) c).getPlazas() > plaza && ((Furgon) c).getCargaMax()>carga ) {
+			if (c instanceof Furgon && ((Furgon) c).getPlazas() >= plaza && ((Furgon) c).getCargaMax()>=carga ) {
 
 				misFurgon.add((Furgon) c);
 			}
@@ -134,7 +134,7 @@ public class Empresa {
 
 		for (Vehiculo c : coleccionVehiculos) {
 
-			if (c instanceof Camion && ((Camion) c).getLongitud() > longitud && ((Camion) c).getCargaMax() > carga ) {
+			if (c instanceof Camion && ((Camion) c).getLongitud() >= longitud && ((Camion) c).getCargaMax() >= carga ) {
 
 				misFurgon.add((Camion) c);
 			}

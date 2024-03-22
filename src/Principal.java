@@ -167,15 +167,15 @@ public class Principal {
 				matricula= sc.nextLine();
 
 				System.out.println("Escribe los dias para alquilar");
-				int diasAlquilar = sc.nextInt();
+				int diasAlquilar = Integer.valueOf(sc.nextLine());
 				
 				System.out.println("Escribe el dni del Cliente");
-				String dniCliente = sc.nextLine();
+				dni = sc.nextLine();
 				
 				
-				if(miEmpresa.buscarCliente(dniCliente) != null && miEmpresa.buscarVehiculo(matricula) != null) {
+				if(miEmpresa.buscarCliente(dni) != null && miEmpresa.buscarVehiculo(matricula) != null) {
 					
-					miEmpresa.hacerReserva(miEmpresa.buscarVehiculo(matricula), miEmpresa.buscarCliente(dniCliente), diasAlquilar);
+					miEmpresa.hacerReserva(miEmpresa.buscarVehiculo(matricula), miEmpresa.buscarCliente(dni), diasAlquilar);
 					
 					miEmpresa.buscarVehiculo(matricula).setAlquilado(true);
 					System.out.println("Vehiculo reservado con Exito!");
