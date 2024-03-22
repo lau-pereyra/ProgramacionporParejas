@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -58,11 +59,11 @@ public class Empresa {
 		return false;
 	}
 	
-	public boolean hacerReserva(Vehiculo v, Cliente c, String fechaInicio, int cantidadDias, String fechaFin) {
+	public boolean hacerReserva(Vehiculo v, Cliente c, int cantidadDias) {
 		
 		if(existeVehiculo(v.getMatricula()) == true && existeCliente(c.getDni()) == true) {
 			
-			Reserva nuevaReserva = new Reserva(v,c,fechaInicio,cantidadDias,fechaFin);
+			Reserva nuevaReserva = new Reserva(v,c,cantidadDias);
 			coleccionReserva.add(nuevaReserva);
 			return true;	
 		}
@@ -96,24 +97,51 @@ public class Empresa {
 	}
 	
 	
-	public Coche mostrarCoche(int plazas, String tipoMotor) {
-		
-		for(Vehiculo unCoche:coleccionVehiculos) {
-			
-			String mostrar = "";
-			if(unCoche instanceof Coche) {
-				Coche c;
-				c = (Coche) unCoche;
-				if(c.getPlazasMax() == plazas && c.getTipoMotor().equalsIgnoreCase(tipoMotor)) {
-					
-					return "Plazas Maximas: " + c.getPlazasMax() + " Tipo de Motor: "+ c.getTipoMotor();
-				}
+	public ArrayList<Coche> mostrarCoche(int plazas, String tipoMotor) {
+
+		ArrayList<Coche> misCoches = new ArrayList<>();
+
+		for (Vehiculo c : coleccionVehiculos) {
+
+			if (c instanceof Coche && ((Coche) c).getPlazasMax() > plazas && c.getTipoMotor().equalsIgnoreCase(tipoMotor)) {
+				misCoches.add((Coche) c);
+
 			}
+
 		}
+		return misCoches;
 	}
 	
+	public ArrayList<Furgon> mostrarFurgon(int plaza, int carga) {
+
+		ArrayList<Furgon> misFurgon = new ArrayList<>();
+
+		for (Vehiculo c : coleccionVehiculos) {
+
+			if (c instanceof Furgon && ((Furgon) c).getPlazas() > plaza && ((Furgon) c).getCargaMax()>carga ) {
+
+				misFurgon.add((Furgon) c);
+			}
+
+		}
+		return misFurgon;
+
+	}
 	
-	
+	public ArrayList<Camion> mostrarCamion(int longitud, int carga) {
+
+		ArrayList<Camion> misFurgon = new ArrayList<>();
+
+		for (Vehiculo c : coleccionVehiculos) {
+
+			if (c instanceof Camion && ((Camion) c).getLongitud() > longitud && ((Camion) c).getCargaMax() > carga ) {
+
+				misFurgon.add((Camion) c);
+			}
+		}
+		return misFurgon;
+
+	}
 	
 	
 	

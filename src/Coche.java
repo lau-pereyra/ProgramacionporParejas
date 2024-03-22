@@ -40,6 +40,12 @@ public class Coche extends Vehiculo {
         this.tipo = tipo;
     }
 
+	@Override
+	public String toString() {
+		return "Coche [plazasMax=" + plazasMax + ", puertas=" + puertas + ", volumen=" + volumen + ", tipo=" + tipo
+				+ "]";
+	}
+
     
 
 }

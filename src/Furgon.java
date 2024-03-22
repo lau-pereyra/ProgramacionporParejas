@@ -34,6 +34,11 @@ public class Furgon extends Vehiculo{
         this.plazas = plazas;
     }
 
+	@Override
+	public String toString() {
+		return "Furgon [cargaMax=" + cargaMax + ", plazas=" + plazas + "]";
+	}
+
     
    
 

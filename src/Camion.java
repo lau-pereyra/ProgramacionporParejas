@@ -33,6 +33,12 @@ public class Camion extends Vehiculo {
         this.longitud = longitud;
     }
 
+
+	@Override
+	public String toString() {
+		return "Camion [cargaMax=" + cargaMax + ", longitud=" + longitud + "]";
+	}
+
     
 
 
