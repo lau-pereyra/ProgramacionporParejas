@@ -6,8 +6,8 @@ public class Furgon extends Vehiculo{
     
 
     public Furgon(String matricula, String modelo, String marca, String tipoMotor, float kmRecorridos,
-            float precioDia,float cargaMax,int plazas) {
-        super(matricula, modelo, marca, tipoMotor, kmRecorridos, precioDia);
+            float precioDia,boolean alquilado,float cargaMax,int plazas) {
+        super(matricula, modelo, marca, tipoMotor, kmRecorridos, precioDia,alquilado);
 
         this.cargaMax = cargaMax;
         this.plazas = plazas;
@@ -39,7 +39,7 @@ public class Furgon extends Vehiculo{
 		return "Furgon [cargaMax=" + cargaMax + ", plazas=" + plazas + "]";
 	}
 
-    
+   
    
 
 

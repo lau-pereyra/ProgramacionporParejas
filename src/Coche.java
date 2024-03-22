@@ -6,8 +6,8 @@ public class Coche extends Vehiculo {
     private float volumen;
     private String tipo;
     public Coche(String matricula, String modelo, String marca, String tipoMotor, float kmRecorridos,
-         float precioDia,String tipo,float volumen,int plazasMax,int puertas) {
-        super(matricula, modelo, marca, tipoMotor, kmRecorridos, precioDia);
+         float precioDia,boolean alquilado,String tipo,float volumen,int plazasMax,int puertas) {
+        super(matricula, modelo, marca, tipoMotor, kmRecorridos, precioDia,alquilado);
         this.plazasMax = plazasMax;
         this.puertas = puertas;
         this.volumen = volumen;

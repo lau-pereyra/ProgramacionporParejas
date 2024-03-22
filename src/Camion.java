@@ -5,8 +5,8 @@ public class Camion extends Vehiculo {
     
 
     public Camion(String matricula, String modelo, String marca, String tipoMotor, float kmRecorridos,
-            float precioDia,float cargaMax,float longitud) {
-        super(matricula, modelo, marca, tipoMotor, kmRecorridos, precioDia);
+            float precioDia,boolean alquilado,float cargaMax,float longitud) {
+        super(matricula, modelo, marca, tipoMotor, kmRecorridos, precioDia,alquilado);
         this.cargaMax = cargaMax;
         this.longitud = longitud;
 

@@ -3,16 +3,18 @@ public class Vehiculo {
 
 	private String matricula, modelo, marca, tipoMotor;
 	private float kmRecorridos, precioDia;
+	private boolean alquilado;
 	
 	
 	public Vehiculo(String matricula, String modelo, String marca, String tipoMotor, float kmRecorridos,
-			float precioDia) {
+			float precioDia,boolean alquilado) {
 		this.matricula = matricula;
 		this.modelo = modelo;
 		this.marca = marca;
 		this.tipoMotor = tipoMotor;
 		this.kmRecorridos = kmRecorridos;
 		this.precioDia = precioDia;
+		this.alquilado = alquilado;
 	}
 
 
@@ -73,6 +75,16 @@ public class Vehiculo {
 
 	public void setPrecioDia(float precioDia) {
 		this.precioDia = precioDia;
+	}
+
+
+	public boolean isAlquilado() {
+		return alquilado;
+	}
+
+
+	public void setAlquilado(boolean alquilado) {
+		this.alquilado = alquilado;
 	}
 	
 	

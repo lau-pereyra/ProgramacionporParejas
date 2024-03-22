@@ -142,9 +142,26 @@ public class Empresa {
 		return misFurgon;
 
 	}
+
+	public Cliente buscarCliente(String id) {
+		return coleccionClientes.get(id);
+		//TE DA LA INFORMACION DE LA CLAVE PRINCIPAL
+	}
 	
 	
-	
+	public Vehiculo buscarVehiculo(String matricula) {
+		
+		for(int i = 0; i < coleccionVehiculos.size();i++) {
+			
+			if(coleccionVehiculos.get(i).getMatricula().equals(matricula)) {
+				
+				return coleccionVehiculos.get(i);
+			}
+			
+		}
+		
+		return null;
+	}
 	
 	
 	
